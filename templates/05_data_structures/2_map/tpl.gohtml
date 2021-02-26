@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Sages</title>
+    </head>
+
+    <body>
+        <ul>
+            {{range .}} <!-- . refers to a collection -->
+            <li>{{.}}</li> <!-- . refers to current entry -->
+            {{end}}
+        </ul>
+
+        <br/>
+
+        <!-- using index and element -->
+        <ul>
+            {{range $key, $value := .}}
+            <li>{{$key}} - {{$value}}</li>
+            {{end}}
+        </ul>
+        
+    </body>
+
+</html>
